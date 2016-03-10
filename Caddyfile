@@ -1,0 +1,17 @@
+api.evetrivia.com {
+    gzip
+    tls shadowdf@gmail.com
+
+    proxy /en-topic-settings/external http://en-topic-settings:80/external {
+        proxy_header X-Forwarded-Proto {scheme}
+        proxy_header X-Forwarded-For {host}
+        proxy_header Host {host}
+    }
+    
+    cors / {
+        origin            *
+        methods           GET,POST,PUT,OPTIONS
+        allow_credentials false
+    	max_age           3600
+    }
+}
