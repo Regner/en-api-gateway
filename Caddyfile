@@ -1,4 +1,4 @@
-http://api.evetrivia.com/ {
+http://api.evetrivia.com {
     gzip
 
     proxy /en-topic-settings/external http://en-topic-settings:80/external {
