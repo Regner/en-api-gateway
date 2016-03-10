@@ -1,6 +1,5 @@
-104.155.15.132 {
+104.155.15.132:80 {
     gzip
-    tls shadowdf@gmail.com
 
     proxy /en-topic-settings/external http://en-topic-settings:80/external {
         proxy_header X-Forwarded-Proto {scheme}
