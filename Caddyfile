@@ -1,4 +1,4 @@
-http://api.evetrivia.com {
+api.evetrivia.com {
     gzip
     tls shadowdf@gmail.com
 
