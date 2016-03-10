@@ -15,6 +15,13 @@ api.evetrivia.com {
         proxy_header Host {host}
         without /en-notifications
     }
+    
+    proxy /en-test/external http://en-test:8000/ {
+        proxy_header X-Forwarded-Proto {scheme}
+        proxy_header X-Forwarded-For {host}
+        proxy_header Host {host}
+        without /en-test
+    }
 
     header / {
         Access-Control-Allow-Origin "*"
