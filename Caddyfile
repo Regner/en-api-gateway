@@ -2,11 +2,11 @@ http://api.evetrivia.com {
     gzip
     tls shadowdf@gmail.com
 
-    proxy /en-topic-settings/external http://en-topic-settings:80/external {
+    proxy /en-topic-settings/external http://en-topic-settings/ {
         proxy_header X-Forwarded-Proto {scheme}
         proxy_header X-Forwarded-For {host}
         proxy_header Host {host}
-        without /en-topic-settings/external
+        without /en-topic-settings
     }
 
     header / {
