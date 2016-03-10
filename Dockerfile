@@ -1,5 +1,3 @@
-FROM nginx:latest
+FROM abiosoft/caddy:latest
 
-COPY nginx.conf /etc/nginx/conf.d/nginx.conf
-
-CMD ["nginx", "-g", "daemon off;"]
+COPY Caddyfile /etc/Caddyfile
